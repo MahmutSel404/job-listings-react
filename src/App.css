@@ -1,38 +1,52 @@
+body {
+  background-color: #e6fffa;
+}
 .App {
-  text-align: center;
+}
+.job-card {
+  display: flex;
+  box-shadow: 5px 4px 6px 5px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.job-description {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+.job-company {
+  font-weight: bold;
+  color: #38b2ac;
+}
+.job-position {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.job-other-details {
+  color: #4a5568;
+}
+.lang-and-tools {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.lang {
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #38b2ac;
+  background-color: #e6fffa;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tool {
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #38b2ac;
+  background-color: #e6fffa;
 }
