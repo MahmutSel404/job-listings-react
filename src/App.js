@@ -6,8 +6,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header>
-        <img src="/images/bg" alt="" />
+      <header className="header-img">
+        <img src="./images/bg-header-desktop.svg" alt="" />
       </header>
       {data.map((job) => (
         <JobBoardComponent job={job} key={job.id} />

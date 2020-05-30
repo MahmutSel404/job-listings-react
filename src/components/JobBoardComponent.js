@@ -29,8 +29,14 @@ const JobBoardComponent = ({
         </p>
       </div>
       <div className="lang-and-tools">
-        {languages ? languages.map((language) => <span className="lang">{language}</span>) : ""}
-        {tools ? tools.map((tool) => <span className="tool">{tool}</span>) : ""}
+        <span className="lang">{role}</span>
+        <span className="lang">{level}</span>
+        {languages
+          ? languages.map((language) => (
+              <span className="lang">{language}</span>
+            ))
+          : ""}
+        {tools ? tools.map((tool) => <span className="lang">{tool}</span>) : ""}
       </div>
     </div>
   );
