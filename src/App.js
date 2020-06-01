@@ -17,12 +17,3 @@ function App() {
 }
 
 export default App;
-
-//Todos
-//1. Study the design  &  json
-//2. Job Board Component
-//3. Get the data from the JSon
-//4.Pass down the data to the JBC
-//5.Style it
-//6.Filter it
-//7.Filter Component
