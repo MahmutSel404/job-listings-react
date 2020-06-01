@@ -4,8 +4,6 @@ const JobBoardComponent = ({
   job: {
     company,
     logo,
-    New,
-    featured,
     position,
     role,
     level,
