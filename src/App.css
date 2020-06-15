@@ -1,7 +1,11 @@
 body {
   background-color: #e6fffa;
 }
+.App{
+width : 80%;
 
+margin:auto;
+}
 .job-card {
   display: flex;
   box-shadow: 5px 4px 6px 5px rgba(0, 0, 0, 0.1);
@@ -21,6 +25,16 @@ body {
   border-radius: 5px;
   height: 60px;
   align-items: center;
+  
+}
+.job-filter-card-tag{
+   font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #38b2ac;
+  background-color: #e6fffa;
+  cursor:pointer;
 }
 .job-card-featured {
   border-width: 0 0 0 4px;
@@ -61,6 +75,7 @@ body {
   border-radius: 0.4rem;
   color: #38b2ac;
   background-color: #e6fffa;
+  cursor:pointer;
 }
 
 .header-img {

@@ -24,31 +24,44 @@ function App() {
     return tags.some((tag) => filters.includes(tag));
   }
   const handleTagClick = (tag) => {
+    if (filters.includes(tag)) return;
     setFilters([...filters, tag]);
+  };
+  const handleFilterClick = (passedFilter) => {
+    setFilters(filters.filter((f) => f !== passedFilter));
   };
   const filteredJobs = jobsData.filter(filterFunction);
 
   return (
-    <div className="App">
+    <>
       <header className="header-img">
         <img src="./images/bg-header-desktop.svg" alt="" />
       </header>
-
-      <div className="job-filter-card">
-        {filters.length > 0 && filters.map((filter) => <span>{filter}</span>)}
+      <div className="App">
+        <div className="job-filter-card">
+          {filters.length > 0 &&
+            filters.map((filter) => (
+              <span
+                onClick={() => handleFilterClick(filter)}
+                className="job-filter-card-tag"
+              >
+                {filter}
+              </span>
+            ))}
+        </div>
+        {filteredJobs.length === 0 ? (
+          <p>Loading....</p>
+        ) : (
+          filteredJobs.map((job) => (
+            <JobBoardComponent
+              job={job}
+              key={job.id}
+              handleTagClick={handleTagClick}
+            />
+          ))
+        )}
       </div>
-      {filteredJobs.length === 0 ? (
-        <p>Loading....</p>
-      ) : (
-        filteredJobs.map((job) => (
-          <JobBoardComponent
-            job={job}
-            key={job.id}
-            handleTagClick={handleTagClick}
-          />
-        ))
-      )}
-    </div>
+    </>
   );
 }
 
